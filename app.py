@@ -11,6 +11,20 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from datetime import datetime
 
 from helpers import apology, login_required, lookup, usd
+<<<<<<< HEAD
+=======
+#DANDANDANDANDANDAQNDANDANDANDANDADNANDFNDSAFDA
+#TESTING
+#fjdklsafjdklsajfdsa
+#fdjsakljfdsaklfdjsal
+#ffdasjkl
+#Cfdsakjlfdsajfdsa
+#test
+#MORE CHANGES
+
+#BING BONG
+
+>>>>>>> 00eb51e28f614efc9e30ba7612c17cebcde54ba3
 
 # Configure application
 app = Flask(__name__)
@@ -44,7 +58,13 @@ def after_request(response):
 
 
 @app.route("/")
+#Get Started Page with explanation of how the website works
+def home():
+    return render_template('home.html')
+
+@app.route("/calendar")
 def index():
+    #replace index with the earnings calendar page that contains search bar for ticker
     """Show portfolio of stocks"""
     user = db.execute("SELECT * FROM users where id = :userid", userid=session["user_id"])
     balance = usd(user[0]["cash"])
@@ -68,6 +88,7 @@ def index():
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
+    #Buy button becomes an add to watchlist button
     """Buy shares of stock"""
     if request.method == "GET":
         return render_template("buy.html")
@@ -117,6 +138,7 @@ def buy():
 @app.route("/history")
 @login_required
 def history():
+    #don't need history
     history = db.execute("SELECT * FROM stocks WHERE user_id =:userid", userid = session["user_id"])
     print(history)
     return render_template("history.html", history = history)
@@ -171,6 +193,7 @@ def logout():
 
 @app.route("/quote", methods=["GET", "POST"])
 @login_required
+#Quote will act as the search mechanism for the analysts recommendation
 def quote():
     """Get stock quote."""
     if request.method == "POST":
@@ -184,6 +207,7 @@ def quote():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    #Register button becomes subscribe available on quote page
     """Register user"""
     if request.method == "POST":
         # Ensure that the username was submitted 
@@ -216,6 +240,7 @@ def register():
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
+    #remove from watchlist button
     """Sell shares of stock"""
     history = db.execute("SELECT symbol FROM stocks WHERE user_id =:userid GROUP BY symbol", userid = session["user_id"])
     if request.method == "GET":
