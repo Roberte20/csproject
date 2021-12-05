@@ -1,5 +1,6 @@
 
 import os
+import requests
 
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
@@ -10,7 +11,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from datetime import datetime
 
 from helpers import apology, login_required, lookup, usd
-# Test
+
 # Configure application
 app = Flask(__name__)
 
@@ -43,7 +44,6 @@ def after_request(response):
 
 
 @app.route("/")
-@login_required
 def index():
     """Show portfolio of stocks"""
     user = db.execute("SELECT * FROM users where id = :userid", userid=session["user_id"])
