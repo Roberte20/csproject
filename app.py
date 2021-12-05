@@ -24,7 +24,6 @@ from helpers import apology, login_required, lookup, usd
 
 #BING BONG
 
->>>>>>> 00eb51e28f614efc9e30ba7612c17cebcde54ba3
 
 # Configure application
 app = Flask(__name__)
