@@ -4,6 +4,7 @@ import urllib.parse
 
 from flask import redirect, render_template, request, session
 from functools import wraps
+#CHANGES
 
 #TEST
 #Adding Different Stuff
@@ -11,6 +12,8 @@ from functools import wraps
 #MORE
 #ADD ANOTHER
 #fdsajk
+
+#BINGBONG
 
 def apology(message, code=400):
     """Render message as an apology to user."""
