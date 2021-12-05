@@ -10,7 +10,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from datetime import datetime
 
 from helpers import apology, login_required, lookup, usd
-
+# Test
 # Configure application
 app = Flask(__name__)
 
