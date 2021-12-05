@@ -9,9 +9,6 @@ from functools import wraps
 #Adding Different Stuff
 #TESTING
 #MORE
-#ADD ANOTHER
-#fdsajk
-
 def apology(message, code=400):
     """Render message as an apology to user."""
     def escape(s):
