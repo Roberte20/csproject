@@ -10,11 +10,14 @@ from functools import wraps
 #Adding Different Stuff
 #TESTING
 #MORE
+<<<<<<< HEAD
+=======
 #ADD ANOTHER
 #fdsajk
 
 #BINGBONG
 
+>>>>>>> 00eb51e28f614efc9e30ba7612c17cebcde54ba3
 def apology(message, code=400):
     """Render message as an apology to user."""
     def escape(s):
