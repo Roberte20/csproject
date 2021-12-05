@@ -53,6 +53,7 @@ def after_request(response):
 
 
 @app.route("/")
+@login_required
 def index():
     """Show portfolio of stocks"""
     user = db.execute("SELECT * FROM users where id = :userid", userid=session["user_id"])
