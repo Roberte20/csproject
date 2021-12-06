@@ -11,18 +11,6 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from datetime import datetime
 
 from helpers import apology, login_required, lookup, usd
-<<<<<<< HEAD
-=======
-#DANDANDANDANDANDAQNDANDANDANDANDADNANDFNDSAFDA
-#TESTING
-#fjdklsafjdklsajfdsa
-#fdjsakljfdsaklfdjsal
-#ffdasjkl
-#Cfdsakjlfdsajfdsa
-#test
-#MORE CHANGES
-
-#BING BONG
 
 
 # Configure application
